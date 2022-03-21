@@ -1,0 +1,31 @@
+<div class="trade">
+    <h1 class="j-1">Jogador 1</h1>
+    <div class="playerone">
+        <div *ngFor="let pokemon of pokemons" class="pokemons">
+            <div class="pokemon">
+                <img [src]="pokemon.sprites.front_default"> <br>
+                Nome: <input value="{{pokemon.name}}" readonly style="border: none;" name="name" #name> <br>
+                Ataque: <input value="{{pokemon.stats[1].base_stat}}" readonly style="border: none;" name="ataque"> <br>
+                Defesa: <input value="{{pokemon.stats[2].base_stat}}" readonly style="border: none;" name="defesa"> <br>
+                Base Experience: <input value="{{pokemon.base_experience}}" readonly style="border: none;" #base_experience name="base_experience"> <br>
+                <button (click)="select(name.value, base_experience.value)" [disabled]="disabled == true">Escolher</button>
+                <button (click)="remove(name.value, base_experience.value)" [disabled]="disabledR == true">Remover</button>
+            </div>
+        </div>
+    </div>
+    <h1 class="j-2"> Jogador 2</h1>
+    <div class="playertwo">
+        <div *ngFor="let pokemon of pokemons" class="pokemons">
+            <div class="pokemon">
+                <img [src]="pokemon.sprites.front_default"> <br>
+                Nome: <input value="{{pokemon.name}}" readonly style="border: none;" name="name" #name> <br>
+                Ataque: <input value="{{pokemon.stats[1].base_stat}}" readonly style="border: none;" name="ataque"> <br>
+                Defesa: <input value="{{pokemon.stats[2].base_stat}}" readonly style="border: none;" name="defesa"> <br>
+                Base Experience: <input value="{{pokemon.base_experience}}" readonly style="border: none;" #base_experience name="base_experience"> <br>
+                <button (click)="select2(name.value, base_experience.value)" [disabled]="disabled2 == true">Escolher</button>
+                <button (click)="remove2(name.value, base_experience.value)" [disabled]="disabledR2 == true">Remover</button>
+            </div>
+        </div>
+    </div>
+    <button (click)="trade()" class="btn-trocar">Trocar</button>
+</div>

@@ -1,0 +1,49 @@
+
+ .trade .playerone, .trade .playertwo{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     margin-left: 40px;
+ }
+ 
+ h1{
+     font-size: 2em;
+     text-align: center;
+     text-transform: uppercase;
+ }
+
+ .j-1{
+     color: pink;
+ }
+
+ .j-2{
+     color: red;
+     margin-top: 150px;
+ }
+
+ button{
+     border: none;
+     border-radius: 5px;
+     color: black;
+     padding: 2px;
+     margin: 2px;
+ }
+
+.btn-trocar{
+    border: none;
+    padding: 10px;
+    width: 20%;
+    margin-top: 50px;
+    margin-left: 40%;
+}
+
+.trade{
+    padding: 20px;
+}
+
+@media (max-width: 1024px)
+{
+    .trade .playerone, .trade .playertwo{
+        grid-template-columns: repeat(auto-fit, minmax(140px, 2fr));
+        margin-left: 60px;
+    }
+}

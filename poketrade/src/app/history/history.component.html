@@ -1,0 +1,21 @@
+<div class="history">
+    <h1>O que já trocaram no Poke Trade?</h1>
+    <div class="trades">
+       <table>
+           <thead>
+               <th>Jogada</th>
+               <th>Pokemons Jogador 1</th>
+               <th>Pokemons Jogador 2</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pokeTrade of pokesTrade" class="trade">
+                    <td>{{pokeTrade.id}}</td>
+                    <td> {{pokeTrade.player_1}} </td>
+                    <td>{{pokeTrade.player_2}} </td>
+                </tr>
+            </tbody>
+       </table>
+    </div>
+</div>
+
+

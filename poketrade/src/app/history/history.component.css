@@ -1,0 +1,54 @@
+.history p{
+    font-size: 16px;
+}
+
+.history .trades{
+    margin-left: 15%;
+    margin-top: 20px;
+}
+
+.history h1{
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+table{    
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    width: 80%;
+}
+
+table thead th {
+    background-color: black;
+    color: white;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 12px 10px;
+}
+
+
+@media (max-width: 1024px)
+{
+    table{
+        width: 100%;
+    }
+    .history .trades{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    h1{
+        font-size: 1em;
+    }
+    table th, table td {
+        padding: 5px;
+    }
+
+    table tbody tr td{
+        word-wrap:break-word;
+    }
+}

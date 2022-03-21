@@ -1,0 +1,8 @@
+.menu{
+    background-color: rgb(18, 147, 252);
+}
+
+.menu a{
+    color: white;
+    text-transform: uppercase;
+}
