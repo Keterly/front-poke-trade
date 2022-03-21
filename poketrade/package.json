@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build --prod",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "heroku-postbuild": "ng build --prod"
@@ -14,8 +14,6 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "~13.2.6",
-    "@angular/compiler-cli": "~13.2.0",
     "@angular/animations": "~13.2.0",
     "@angular/cdk": "^13.3.0",
     "@angular/common": "~13.2.0",
@@ -26,13 +24,15 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.6",
+    "@angular/cli": "~13.2.6",
+    "@angular/compiler-cli": "~13.2.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~4.0.0",
