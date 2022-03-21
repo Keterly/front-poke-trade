@@ -67,8 +67,6 @@ export class PlayerOneComponent implements OnInit {
     if(this.count > 0){
     this.disabledR = false
     this.disabled = false
-    this.count--
-    this.base_exp -= Number(base_experience)
     //para remover o pokemon da lista de pokemons trocados, seu indice é identificado e removido do array
     //se um mesmo pokemon for escolhido varias vezes, seu nome será removido uma única vez a cada clique
     for( var i = 0; i < this.pokes_play_1.length; i++){ 
@@ -77,7 +75,12 @@ export class PlayerOneComponent implements OnInit {
         //remove 1 valor do indice x
           this.pokes_play_1.splice(i, 1); 
           console.log(this.pokes_play_1)
+          this.count--
+          this.base_exp -= Number(base_experience)
           return
+      }
+      else{
+        console.log('pokemon não escolhido')
       }
   }
   }
@@ -119,21 +122,25 @@ export class PlayerOneComponent implements OnInit {
     if(this.count2 > 0){
       this.disabledR2 = false
       this.disabled2 = false
-      this.count2--
-      this.base_exp2 -= Number(base_experience)
       for( var i = 0; i < this.pokes_play_2.length; i++){ 
     
         if ( this.pokes_play_2[i] === " " + name) { 
+          //remove 1 valor do indice x
             this.pokes_play_2.splice(i, 1); 
             console.log(this.pokes_play_2)
+            this.count2--
+            this.base_exp2 -= Number(base_experience)
             return
+        }
+        else{
+          console.log('pokemon não escolhido')
         }
     }
     }
     else{
       this.disabledR2 = true;
       window.alert("Não há mais nada para excluir")
-
+  
     }
     console.log(this.count2)
   }
@@ -167,7 +174,17 @@ export class PlayerOneComponent implements OnInit {
     if(this.dif <= 20){
       window.alert("Troca Justa")
       this.insert()
-      window.location.reload()
+      this.count = 0,
+      this.count2 = 0
+      this.base_exp = 0,
+      this.base_exp2 = 0
+      this.dif = 0
+      this.pokes_play_1 = []
+      this.pokes_play_2 = []
+      this.disabled = false
+      this.disabled2 = false
+      this.disabledR = true 
+      this.disabledR2 = true
     }
     else{
       window.alert("Troca Injusta")
